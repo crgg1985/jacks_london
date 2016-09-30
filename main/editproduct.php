@@ -11,6 +11,23 @@
 <center><h4><i class="icon-edit icon-large"></i> Editar Producto</h4></center>
 <hr>
 <div id="ac">
+
+<span>Categoria : </span>
+
+			<td><?php
+				include('../connect.php');
+				$result2 = $db->prepare("SELECT * FROM category where category_id = ". $row['category_id']);
+					$result2->bindParam(':category_id', $res);
+					$result2->execute();
+					for($i=0; $row_category = $result2->fetch(); $i++){
+				?>
+					<?php echo $row_category['descripcion']; ?>
+				<?php
+				}
+				?>
+			</td>
+<br>
+
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
 <span>Nombre Marca: </span><input type="text" style="width:265px; height:30px;"  name="code" value="<?php echo $row['product_code']; ?>" Required/><br>
 <span>Nombre Generico : </span><input type="text" style="width:265px; height:30px;"  name="gen" value="<?php echo $row['gen_name']; ?>" /><br>

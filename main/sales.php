@@ -385,20 +385,20 @@ if($position=='admin') {
 			<td>
 			<?php
 			$ppp=$row['price'];
-			echo formatMoney($ppp, true);
+			echo $ppp;
 			?>
 			</td>
 			<td><?php echo $row['qty']; ?></td>
 			<td>
 			<?php
 			$dfdf=$row['amount'];
-			echo formatMoney($dfdf, true);
+			echo $dfdf;
 			?>
 			</td>
 			<td>
 			<?php
 			$profit=$row['profit'];
-			echo formatMoney($profit, true);
+			echo $profit;
 			?>
 			</td>
 			<td width="90"><a href="delete.php?id=<?php echo $row['transaction_id']; ?>&invoice=<?php echo $_GET['invoice']; ?>&dle=<?php echo $_GET['id']; ?>&qty=<?php echo $row['qty'];?>&code=<?php echo $row['product'];?>"><button class="btn btn-mini btn-warning"><i class="icon icon-remove"></i> Cancelar </button></a></td>

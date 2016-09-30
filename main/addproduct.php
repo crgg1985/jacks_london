@@ -3,6 +3,7 @@
 <center><h4><i class="icon-plus-sign icon-large"></i> Agregar Producto</h4></center>
 <hr>
 <div id="ac">
+
 <span>Categoria : </span>
 <select name="category"  style="width:265px; height:30px; margin-left:-5px;" >
 <option></option>
